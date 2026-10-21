@@ -82,7 +82,7 @@ body {
     width: 48px;
     height: 48px;
     border-radius: 10px;
-    background-color: lightgray;
+    background-color: royalblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,9 +135,38 @@ body {
     );
 }
 
+.progres-hijau {
+    background: conic-gradient(
+        green 0% 50%,
+        aliceblue 50% 100%
+    );
+}
+
 .isi-lingkaran {
     width: 56px;
     height: 56px;
     background-color: white;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.garis-progres {
+    height: 7px;
+    background-color: black;
+    margin-top: 22px;
+    border-radius: 20px;
+}
+
+.isi-garis {
+    height: 100%;
+}
+
+.garis-biru {
+    background-color: royalblue;
+}
+
+.garis-hijau {
+    background-color: green;
 }
