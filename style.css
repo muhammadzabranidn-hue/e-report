@@ -170,3 +170,7 @@ body {
 .garis-hijau {
     background-color: green;
 }
+
+.area-grafik {
+    position: relative;
+}
