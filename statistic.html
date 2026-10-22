@@ -33,34 +33,34 @@
         <main class="col-lg-10 p-4">
             <h2>Statistik Data Laporan</h2>
 
-            <canvas id="canvas-chart"></canvas>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Statistik Laporan</h5>
+                            <p>Statistik Laporan Santri Setiap Bulan</p>
+                            <div class="area-grafik">
+                                <canvas id="santriChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Status Laporan</h5>
+                            <p>Laporan Santri</p>
+                            <canvas id="statusChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
         </main>
     </div>
 
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const ctx = document.getElementById('canvas-chart');
-      
-        new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-              label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 3],
-              borderWidth: 1
-            }]
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: true
-              }
-            }
-          }
-        });
-      </script>
+    <script src="chart.js"></script>
 </body>
 </html>
