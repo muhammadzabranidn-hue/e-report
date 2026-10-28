@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengaturan | IDN E-Report</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3 CSS & Icons -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        :root {
+            --bs-font-sans-serif: 'Plus Jakarta Sans', sans-serif;
+            --bs-primary: #2f63e8;
+            --bs-primary-rgb: 47, 99, 232;
+        }
+
+        body {
+            font-family: var(--bs-font-sans-serif);
+            background-color: #f8fafc;
+            color: #334155;
+        }
+
+        /* Topbar & Navbar */
+        .app-topbar {
+            height: 64px;
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* Brand Styling */
+        .brand-mark {
+            display: inline-flex;
+            gap: 3px;
+            align-items: center;
+        }
+        .brand-mark span {
+            width: 4px;
+            height: 16px;
+            background-color: var(--bs-primary);
+            border-radius: 2px;
+        }
+        .brand-mark span:nth-child(2) { height: 20px; opacity: 0.7; }
+        .brand-mark span:nth-child(3) { height: 12px; opacity: 0.4; }
+
+        /* Layout Sidebar */
+        .sidebar {
+            width: 260px;
+            min-height: calc(100vh - 64px);
+            background: #ffffff;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .sidebar .nav-link {
+            color: #64748b;
+            font-weight: 500;
+            border-radius: 0.5rem;
+            padding: 0.625rem 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar .nav-link:hover {
+            color: var(--bs-primary);
+            background-color: #f1f5f9;
+        }
+
+        .sidebar .nav-link.active {
+            color: var(--bs-primary);
+            background-color: rgba(47, 99, 232, 0.08);
+            font-weight: 600;
+        }
+
+        /* Content Area */
+        .content-area {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .avatar-circle {
+            width: 38px;
+            height: 38px;
+            background-color: var(--bs-primary);
+            color: white;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body class="app-body">
+
+    <!-- Topbar -->
+    <header class="app-topbar sticky-top d-flex align-items-center justify-content-between px-3 px-md-4">
+        <div class="d-flex align-items-center gap-3">
+            <a class="text-decoration-none d-flex align-items-center gap-2" href="index.html">
+                <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="d-flex flex-column leading-tight">
+                    <strong class="lh-1 fs-6 text-dark">IDN E-Report</strong>
+                    <small class="text-muted fs-8">SMK IDN 2026</small>
+                </span>
+            </a>
+            <span class="text-muted d-none d-sm-inline">/</span>
+            <span class="text-secondary fw-semibold small d-none d-sm-inline">Pengaturan</span>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+            <div class="text-end d-none d-sm-block">
+                <strong class="d-block fs-7 lh-1 text-dark">Admin Sarpras</strong>
+                <small class="text-muted fs-8">Pengelola Sistem</small>
+            </div>
+            <span class="avatar-circle">AS</span>
+        </div>
+    </header>
+
+    <div class="d-flex">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar d-none d-lg-flex flex-column p-3">
+            <p class="text-uppercase text-muted fw-bold fs-8 mb-2 px-2">Workspace</p>
+            <nav class="nav flex-column gap-1" aria-label="Menu dashboard">
+                <a class="nav-link" href="dashboard.html">
+                    <i class="bi bi-grid-1x2 fs-5"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a class="nav-link" href="reports.html">
+                    <i class="bi bi-file-earmark-text fs-5"></i>
+                    <span>Data laporan</span>
+                </a>
+                <a class="nav-link" href="statistic.html">
+                    <i class="bi bi-pie-chart fs-5"></i>
+                    <span>Statistik</span>
+                </a>
+                <a class="nav-link active" href="settings.html">
+                    <i class="bi bi-gear fs-5"></i>
+                    <span>Pengaturan</span>
+                </a>
+            </nav>
+
+            <hr class="my-3 text-muted">
+
+            <a class="nav-link text-secondary mt-auto" href="index.html">
+                <i class="bi bi-arrow-left"></i>
+                <span>Kembali ke landing page</span>
+            </a>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content-area">
+            <!-- Mobile Offcanvas Sidebar Toggle -->
+            <div class="d-lg-none mb-3">
+                <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+                    <i class="bi bi-list me-1"></i> Menu Sidebar
+                </button>
+            </div>
+
+            <!-- Page Title -->
+            <div class="mb-4">
+                <h1 class="h3 fw-bold text-dark mb-1">Pengaturan Sistem</h1>
+                <p class="text-secondary small mb-0">Kelola informasi administrator dan identitas aplikasi.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Administrator Card -->
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-header bg-transparent border-0 pt-4 px-4 pb-0">
+                            <h5 class="fw-bold mb-0"><i class="bi bi-person-circle text-primary me-2"></i>Administrator</h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <form action="">
+                                <div class="mb-3">
+                                    <label class="form-label small fw-semibold">Nama Admin</label>
+                                    <input type="text" value="Admin Sarpras" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label small fw-semibold">Email</label>
+                                    <input type="text" value="admin@idn.com" class="form-control">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label small fw-semibold">Jabatan</label>
+                                    <input type="text" value="Pengelola Sistem" class="form-control">
+                                </div>
+                                <button class="btn btn-primary rounded-pill px-4">
+                                    <i class="bi bi-floppy me-1"></i> Simpan Profil
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nama Aplikasi Card -->
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-header bg-transparent border-0 pt-4 px-4 pb-0">
+                            <h5 class="fw-bold mb-0"><i class="bi bi-window-app text-success me-2"></i>Nama Aplikasi</h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <form action="">
+                                <div class="mb-3">
+                                    <label class="form-label small fw-semibold">Nama Aplikasi</label>
+                                    <input type="text" value="IDN E-Report" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label small fw-semibold">Nama Sekolah</label>
+                                    <input type="text" value="SMK IDN Boarding School" class="form-control">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label small fw-semibold">Deskripsi Aplikasi</label>
+                                    <input type="text" value="Portal pengaduan fasilitas, akademik, dan aspirasi santri" class="form-control">
+                                </div>
+                                <button class="btn btn-primary rounded-pill px-4">
+                                    <i class="bi bi-floppy me-1"></i> Simpan Profil
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preferensi Sistem Card -->
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="fw-bold mb-1">
+                                        <i class="bi bi-bell text-warning me-2"></i>
+                                        Preferensi Sistem
+                                    </h5>
+                                    <p class="text-secondary small mb-0">Atur sistem pemberitahuan untuk laporan baru yang masuk.</p>
+                                </div>
+                                <div class="form-check form-switch fs-5">
+                                    <input type="checkbox" class="form-check-input" checked role="switch" id="notifSwitch">
+                                    <label class="form-check-label visually-hidden" for="notifSwitch">Aktifkan Notifikasi</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Mobile Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold">Menu Navigation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-3">
+            <nav class="nav flex-column gap-1">
+                <a class="nav-link text-secondary" href="dashboard.html"><i class="bi bi-grid-1x2 me-2"></i> Dashboard</a>
+                <a class="nav-link text-secondary" href="reports.html"><i class="bi bi-file-earmark-text me-2"></i> Data laporan</a>
+                <a class="nav-link text-secondary" href="statistic.html"><i class="bi bi-pie-chart me-2"></i> Statistik</a>
+                <a class="nav-link active text-primary fw-bold" href="settings.html"><i class="bi bi-gear me-2"></i> Pengaturan</a>
+            </nav>
+            <hr>
+            <a class="nav-link text-secondary" href="index.html"><i class="bi bi-arrow-left me-2"></i> Kembali ke landing page</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
