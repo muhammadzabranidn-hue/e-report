@@ -1,285 +1,468 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Report</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <meta name="description" content="IDN E-Report adalah portal pengaduan fasilitas, akademik, dan aspirasi santri SMK IDN Boarding School.">
+    <title>IDN E-Report 2026 | Portal Pengaduan & Fasilitas Siswa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
 </head>
-<body>
-    
-    <nav class="navbar topbar px-4">
-        <span class="navbar-brand text-white fw-bold">
-            E-Report <span class="brand-light">Santri</span>
-        </span>
-        <div class="admin-profile">
-            <div>
-                 <span>Admin</span>
-                 <small>Pengelola Sistem</small>
-            </div>
-            <div class="admin-avatar">AD</div>
-        </div>
-    </nav>
+<body class="landing-page">
 
-    <div class="row">
-        <aside class="sidebar col-lg-2 p-4">
-            <h5 class="menu-label">Menu</h5>
-            <a href="" class="menu-link active"> <i class="bi bi-bar-chart-line-fill"></i> Dahsboard</a>
-            <a href="statistic.html" class="menu-link"> <i class="bi bi-bookmark-check-fill"></i> Data Laporan</a>
-            <a href="" class="menu-link"> <i class="bi bi-gear-fill"></i> Pengaturan</a>
-        </aside>
-        <main class="col-lg-10 p-4">
-            <h2>Dashboard</h2>
-            <p>Selamat datang di apliklasi E-report santri</p>
-            <div class="row">
-                <!-- Card 1 -->
-                <div class="col-lg-3">
-                    <div class="card stat-card h-100">
-                        <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <p class="text-secondary mb-1">Total Santri</p>
-                                <h3>145</h3>
-
-                            </div>
-                                <div class="stat-icon bg-primary-subtle text-white">
-                                    <i class="bi bi-people-fill"></i>
-                                </div>
-                        </div>
-                        <small>Data Seluruh Santri</small>
-                    </div>
-                </div>
-                </div>
-                <!-- Card 1 -->
-                <div class="col-lg-3">
-                    <div class="card stat-card h-100">
-                        <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <p class="text-secondary mb-1">Total Laporan</p>
-                                <h3>85</h3>
-
-                            </div>
-                                <div class="stat-icon bg-primary-subtle text-white">
-                                    <i class="bi bi-book-fill"></i>
-                                </div>
-                        </div>
-                        <small>Data Seluruh Laporan Masuk</small>
-                    </div>
-                </div>
-                </div>
-                <!-- Card 1 -->
-                <div class="col-lg-3">
-                    <div class="card stat-card h-100">
-                        <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <p class="text-secondary mb-1">Total Kelas</p>
-                                <h3>11</h3>
-
-                            </div>
-                                <div class="stat-icon bg-primary-subtle text-white">
-                                    <i class="bi bi-people-fill"></i>
-                                </div>
-                        </div>
-                        <small>Data Seluruh Kelas</small>
-                    </div>
-                </div>
-                </div>
-                <!-- Card 1 -->
-                <div class="col-lg-3">
-                    <div class="card stat-card h-100">
-                        <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <p class="text-secondary mb-1">Total Asrama</p>
-                                <h3>14+</h3>
-
-                            </div>
-                                <div class="stat-icon bg-primary-subtle text-white">
-                                    <i class="bi bi-people-fill"></i>
-                                </div>
-                        </div>
-                        <small>Data Seluruh Asrama</small>
-                    </div>
-                </div>
-                </div>
-            </div>
+    <!-- Header Navigation -->
+    <header class="sticky-top bg-white border-bottom shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light container py-3" aria-label="Navigasi utama">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="IDN E-Report beranda">
+                <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="d-flex flex-column leading-tight">
+                    <strong class="lh-1 fs-5 text-dark">IDN E-Report</strong>
+                    <small class="text-muted fs-7">SMK IDN 2026</small>
+                </span>
+            </a>
             
-            <div class="row g-4 mt-2">
-                <!-- Total Santri -->
-                 
-                <!-- card stat 1 -->
-                 <div class="col-lg-3">
-                    <div class="card stat-card">
-                        <div class="stat-atas">
-                            <div>
-                                <p class="stat-label">Total Santri</p>
-                                <h3 class="stat-number">145</h3>
-                                <span class="stat-keterangan text-primary"> 
-                                    Data Seluruh Santri
-                                    <i class="bi bi-person"></i>
-                                </span>
-                            </div>
-                            <div class="lingkaran-progres progres-biru">
-                                <div class="isi-lingkaran"><span>75%</span></div>
-                            </div>
-                        </div>
-                        <div class="garis-progres">
-                            <div class="isi-garis garis-biru"></div>
-                        </div>
-                    </div>
-                 </div>
-                 <!-- End stat card 2 -->
-                <!-- card stat 2 -->
-                 <div class="col-lg-3">
-                    <div class="card stat-card">
-                        <div class="stat-atas">
-                            <div>
-                                <p class="stat-label">Total Laporan</p>
-                                <h3 class="stat-number">85</h3>
-                                <span class="stat-keterangan text-success"> 
-                                    Data Seluruh Laporan
-                                    <i class="bi bi-pen"></i>
-                                </span>
-                            </div>
-                            <div class="lingkaran-progres progres-hijau">
-                                <div class="isi-lingkaran"><span>75%</span></div>
-                            </div>
-                        </div>
-                        <div class="garis-progres">
-                            <div class="isi-garis garis-hijau"></div>
-                        </div>
-                    </div>
-                 </div>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-controls="navLinks" aria-expanded="false" aria-label="Buka navigasi">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                 <!-- End stat card 3 -->
-                <!-- card stat 3 -->
-                 <div class="col-lg-3">
-                    <div class="card stat-card">
-                        <div class="stat-atas">
-                            <div>
-                                <p class="stat-label">Total Santri</p>
-                                <h3 class="stat-number">145</h3>
-                                <span class="stat-keterangan text-primary"> 
-                                    Data Seluruh Santri
-                                    <i class="bi bi-person"></i>
-                                </span>
-                            </div>
-                            <div class="lingkaran-progres progres-biru">
-                                <div class="isi-lingkaran"><span>75%</span></div>
-                            </div>
-                        </div>
-                        <div class="garis-progres">
-                            <div class="isi-garis garis-biru"></div>
-                        </div>
-                    </div>
-                 </div>
-
-                 <!-- End stat card 4 -->
-                <!-- card stat 4 -->
-                 <div class="col-lg-3">
-                    <div class="card stat-card">
-                        <div class="stat-atas">
-                            <div>
-                                <p class="stat-label">Total Santri</p>
-                                <h3 class="stat-number">145</h3>
-                                <span class="stat-keterangan text-primary"> 
-                                    Data Seluruh Santri
-                                    <i class="bi bi-person"></i>
-                                </span>
-                            </div>
-                            <div class="lingkaran-progres progres-biru">
-                                <div class="isi-lingkaran"><span>75%</span></div>
-                            </div>
-                        </div>
-                        <div class="garis-progres">
-                            <div class="isi-garis garis-biru"></div>
-                        </div>
-                    </div>
-                 </div>
-                 <!-- End stat card -->
-
+            <div class="collapse navbar-collapse" id="navLinks">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-2 mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link active fw-semibold" href="#home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#recent">Laporan Terbaru</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-primary rounded-pill px-4" href="dashboard.html">Ke Dashboard <i class="bi bi-arrow-up-right ms-1"></i></a>
+                    </li>
+                </ul>
             </div>
+        </nav>
+    </header>
 
-            <div class="mt-3">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <h4 class="judul-bagian mb-1">Data Laporan</h4>
-                        <p class="text-secondary">Daftar Laporan Santri</p>
-                    </div>
-                    <button class="btn btn-success"> <i class="bi bi-plus-lg"></i>Tambah Laporan</button>
-                </div>
-                <div class="card tabel-laporan">
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-hover align-middle">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama Santri</th>
-                                        <th>Jenis Laporan</th>
-                                        <th>Tanggal</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Elang</td>
-                                        <td>English Punishment</td>
-                                        <td>20 Oktober 2026</td>
-                                        <td> <span class="badge text-bg-warning">Menunggu</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-warning"><i class="bi bi-eye"></i></button>
-                                            <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
-                                            <button class="btn btn-sm btn-info"><i class="bi bi-pen"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Rafasya</td>
-                                        <td>Telat Ke Masjid</td>
-                                        <td>20 Oktober 2026</td>
-                                        <td> <span class="badge text-bg-success">Diterima</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-warning"><i class="bi bi-eye"></i></button>
-                                            <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
-                                            <button class="btn btn-sm btn-info"><i class="bi bi-pen"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Raffi</td>
-                                        <td>Main Mobile Legend</td>
-                                        <td>20 Oktober 2026</td>
-                                        <td> <span class="badge text-bg-danger">Ditolak</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-warning"><i class="bi bi-eye"></i></button>
-                                            <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
-                                            <button class="btn btn-sm btn-info"><i class="bi bi-pen"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-6">
+                        <div class="d-inline-flex align-items-center gap-2 bg-primary-subtle text-primary fw-semibold px-3 py-1 rounded-pill mb-3">
+                            <span class="bg-primary rounded-circle" style="width: 8px; height: 8px;"></span>
+                            Portal resmi aspirasi & fasilitas IDN
+                        </div>
+                        <h1 class="display-4 fw-bold text-dark mb-3">
+                            Sampaikan pengaduan,<br><em class="text-primary fs-inherit font-style-normal">wujudkan fasilitas</em><br>terbaik.
+                        </h1>
+                        <p class="lead text-secondary mb-4">Platform resmi santri untuk melaporkan kendala fasilitas, akademik, dan asrama secara transparan, cepat, dan terpercaya.</p>
+                        
+                        <div class="d-flex flex-wrap gap-3 mb-5">
+                            <a class="btn btn-primary btn-lg rounded-pill px-4" href="dashboard.html#new-report">Laporkan Masalah <i class="bi bi-arrow-up-right ms-1"></i></a>
+                            <a class="btn btn-outline-secondary btn-lg rounded-pill px-4" href="#about">Pelajari Alurnya <i class="bi bi-arrow-down ms-1"></i></a>
+                        </div>
+
+                        <div class="row pt-3 border-top g-3 text-center text-sm-start">
+                            <div class="col-4">
+                                <h3 class="fw-bold mb-0 text-dark">150<span class="text-primary">+</span></h3>
+                                <small class="text-muted">Laporan dituntaskan</small>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="fw-bold mb-0 text-dark">98<span class="text-primary">%</span></h3>
+                                <small class="text-muted">Respon tepat waktu</small>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="fw-bold mb-0 text-dark">&lt; 24</h3>
+                                <small class="text-muted">Jam rata-rata penanganan</small>
+                            </div>
                         </div>
                     </div>
-                    <ul class="pagination m-3">
-                        <li class="page-item"><a href="" class="page-link">Previous</a></li>
-                        <li class="page-item"><a href="" class="page-link active">1</a></li>
-                        <li class="page-item"><a href="" class="page-link">2</a></li>
-                        <li class="page-item"><a href="" class="page-link">3</a></li>
-                        <li class="page-item"><a href="" class="page-link">Next</a></li>
+
+                    <!-- Visual / Dashboard Preview Card -->
+                    <div class="col-lg-6">
+                        <div class="dashboard-preview p-4 position-relative">
+                            <div class="d-flex justify-content-between align-items-center pb-3 mb-3 border-bottom">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="bg-primary rounded-circle" style="width: 10px; height: 10px;"></span>
+                                    <span class="bg-secondary-subtle rounded-circle" style="width: 10px; height: 10px;"></span>
+                                    <span class="bg-secondary-subtle rounded-circle" style="width: 10px; height: 10px;"></span>
+                                    <small class="fw-semibold text-muted ms-2">Ringkasan laporan</small>
+                                </div>
+                                <span class="text-muted fs-5">•••</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div>
+                                    <small class="text-muted d-block">Selamat datang kembali,</small>
+                                    <strong class="fs-5">Admin Sarpras 👋</strong>
+                                </div>
+                                <span class="avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px;">AS</span>
+                            </div>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-6">
+                                    <div class="p-3 bg-light rounded-3 border">
+                                        <small class="text-muted d-block mb-1"><i class="bi bi-box-arrow-up-right text-primary me-1"></i> Total laporan</small>
+                                        <div class="fs-4 fw-bold">85</div>
+                                        <span class="badge bg-success-subtle text-success mt-1">↑ 12% bulan ini</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-3 bg-light rounded-3 border">
+                                        <small class="text-muted d-block mb-1"><i class="bi bi-check-circle text-success me-1"></i> Selesai</small>
+                                        <div class="fs-4 fw-bold">62</div>
+                                        <span class="badge bg-success-subtle text-success mt-1">↑ 8% bulan ini</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div><small class="text-muted d-block">Aktivitas laporan</small><strong>Januari — Juni 2026</strong></div>
+                                    <small class="text-primary cursor-pointer">Minggu ini ▾</small>
+                                </div>
+                                <svg class="w-100" height="100" viewBox="0 0 430 120" role="img" aria-label="Grafik aktivitas laporan">
+                                    <defs>
+                                        <linearGradient id="areaFill" x1="0" x2="0" y1="0" y2="1">
+                                            <stop offset="0" stop-color="#2f63e8" stop-opacity=".25"/>
+                                            <stop offset="1" stop-color="#2f63e8" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M0 97 C28 90, 42 78, 68 84 S104 72, 126 79 S157 63, 182 70 S216 45, 240 58 S275 37, 300 45 S326 22, 350 34 S386 18, 430 9 L430 120 L0 120Z" fill="url(#areaFill)"/>
+                                    <path d="M0 97 C28 90, 42 78, 68 84 S104 72, 126 79 S157 63, 182 70 S216 45, 240 58 S275 37, 300 45 S326 22, 350 34 S386 18, 430 9" fill="none" stroke="#2f63e8" stroke-width="3" stroke-linecap="round"/>
+                                    <circle cx="350" cy="34" r="5" fill="#fff" stroke="#2f63e8" stroke-width="3"/>
+                                </svg>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <small class="text-muted fw-bold">Laporan terbaru</small>
+                                <a href="#recent" class="text-decoration-none small">Lihat semua →</a>
+                            </div>
+
+                            <div class="list-group list-group-flush gap-2">
+                                <div class="list-group-item bg-light border rounded p-2 d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="bg-primary-subtle text-primary p-2 rounded"><i class="bi bi-file-earmark-text"></i></span>
+                                        <div>
+                                            <strong class="d-block fs-6">Proyektor kelas tidak menyala</strong>
+                                            <small class="text-muted">Fasilitas · 2 jam yang lalu</small>
+                                        </div>
+                                    </div>
+                                    <span class="badge bg-warning text-dark">Diproses</span>
+                                </div>
+                                <div class="list-group-item bg-light border rounded p-2 d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="bg-warning-subtle text-warning p-2 rounded"><i class="bi bi-droplet"></i></span>
+                                        <div>
+                                            <strong class="d-block fs-6">Keran wudhu bocor deras</strong>
+                                            <small class="text-muted">Fasilitas · 5 jam yang lalu</small>
+                                        </div>
+                                    </div>
+                                    <span class="badge bg-success">Selesai</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-5 bg-white border-top" id="about">
+            <div class="container my-4">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-5">
+                        <div class="p-4 bg-primary text-white rounded-4 shadow position-relative">
+                            <span class="badge bg-white text-primary mb-3">IDN</span>
+                            <small class="d-block opacity-75">Sistem aktif • Jaga lingkungan belajar bersama</small>
+                            <h3 class="fw-bold my-3">Satu laporan,<br>membawa perubahan.</h3>
+                            <div class="mt-4 pt-3 border-top border-white-50 d-flex justify-content-between align-items-center">
+                                <small>Rata-rata penyelesaian</small>
+                                <strong class="fs-5">18 jam</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <span class="text-primary fw-semibold d-block mb-1">Tentang sistem</span>
+                        <h2 class="fw-bold mb-3">Teknologi sederhana untuk <em class="text-primary font-style-normal">perubahan nyata.</em></h2>
+                        <p class="text-secondary">IDN E-Report dikembangkan sebagai jembatan komunikasi digital antara santri, guru, dan tim sarana prasarana SMK IDN Boarding School.</p>
+                        <p class="text-secondary mb-4">Setiap laporan tercatat, diteruskan ke tim yang tepat, dan dapat dipantau prosesnya sampai selesai. Karena lingkungan belajar yang nyaman dimulai dari kepedulian bersama.</p>
+                        
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3">
+                                    <span class="badge bg-primary-subtle text-primary rounded-circle p-3 d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px;">01</span>
+                                    <div>
+                                        <strong>Cepat & terarah</strong>
+                                        <p class="small text-muted mb-0">Laporan langsung masuk ke tim teknisi sesuai kategori.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3">
+                                    <span class="badge bg-primary-subtle text-primary rounded-circle p-3 d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px;">02</span>
+                                    <div>
+                                        <strong>Transparan & aman</strong>
+                                        <p class="small text-muted mb-0">Progres penanganan dapat dipantau dengan data yang terlindungi.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-5 bg-light" id="services">
+            <div class="container my-4">
+                <div class="text-center max-w-2xl mx-auto mb-5">
+                    <span class="text-primary fw-semibold d-block mb-1">Kategori layanan</span>
+                    <h2 class="fw-bold">Semua laporan, satu <em class="text-primary font-style-normal">pintu.</em></h2>
+                    <p class="text-muted">Pilih kategori yang paling sesuai agar pengaduanmu diproses oleh divisi terkait dengan lebih akurat.</p>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4 service-card">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="fs-3 text-primary"><i class="bi bi-tools"></i></span>
+                                <span class="text-muted fw-bold">01</span>
+                            </div>
+                            <h4 class="fw-bold">Pengaduan fasilitas</h4>
+                            <p class="text-muted small">Laporkan kerusakan ruang kelas, lab, jaringan internet, asrama, hingga sarana ibadah.</p>
+                            <a class="mt-auto text-decoration-none fw-semibold small" href="reports.html?category=fasilitas">Lihat laporan fasilitas <i class="bi bi-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4 service-card">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="fs-3 text-purple"><i class="bi bi-book"></i></span>
+                                <span class="text-muted fw-bold">02</span>
+                            </div>
+                            <h4 class="fw-bold">Pengaduan akademik</h4>
+                            <p class="text-muted small">Sampaikan kendala perangkat pembelajaran, modul, jadwal, atau koneksi untuk praktik.</p>
+                            <a class="mt-auto text-decoration-none fw-semibold small" href="reports.html?category=akademik">Lihat laporan akademik <i class="bi bi-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4 service-card">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="fs-3 text-success"><i class="bi bi-shield-lock"></i></span>
+                                <span class="text-muted fw-bold">03</span>
+                            </div>
+                            <h4 class="fw-bold">Aspirasi & privasi</h4>
+                            <p class="text-muted small">Berikan masukan dan kritik konstruktif dengan perlindungan data pelapor yang terjaga.</p>
+                            <a class="mt-auto text-decoration-none fw-semibold small text-success" href="reports.html?category=aspirasi">Panduan privasi <i class="bi bi-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-primary text-white rounded-4 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="bi bi-stars fs-1"></i>
+                        <div>
+                            <strong class="d-block fs-5">Baru pertama kali ingin melapor?</strong>
+                            <p class="mb-0 small opacity-75">Ikuti alur 4 langkah mudah dan sertakan foto bukti agar laporanmu segera diproses.</p>
+                        </div>
+                    </div>
+                    <a class="btn btn-light rounded-pill px-4 text-nowrap" href="dashboard.html#new-report">Mulai buat laporan <i class="bi bi-arrow-up-right ms-1"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Reports Section -->
+        <section class="py-5 bg-white" id="recent">
+            <div class="container my-4">
+                <div class="d-flex justify-content-between align-items-end mb-4">
+                    <div>
+                        <span class="text-primary fw-semibold d-block mb-1">Pembaruan terkini</span>
+                        <h2 class="fw-bold mb-0">Laporan <em class="text-primary font-style-normal">terbaru.</em></h2>
+                    </div>
+                    <a class="text-decoration-none fw-semibold" href="reports.html">Semua laporan <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <!-- Report Item 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border rounded-3 shadow-sm report-card overflow-hidden">
+                            <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center pt-3 px-3">
+                                <span class="badge bg-primary-subtle text-primary">Fasilitas</span>
+                                <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill"><i class="bi bi-clock"></i> Dalam penanganan</span>
+                            </div>
+                            <div class="card-body px-3">
+                                <small class="text-muted d-block mb-1">RUANG KELAS · X RPL A</small>
+                                <h5 class="card-title fw-bold fs-6">Proyektor & kabel VGA ruang X RPL A tidak menyala</h5>
+                                <p class="card-text text-secondary small">Proyektor gantung ruang kelas teori mati mendadak saat sesi coding. Lampu indikator berkedip merah dan butuh pengecekan adaptor daya.</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between align-items-center pb-3 px-3">
+                                <small class="text-muted">REP-1048 • 2 jam lalu</small>
+                                <small class="fw-bold">Zabran Assyafiq</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Report Item 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border rounded-3 shadow-sm report-card overflow-hidden">
+                            <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center pt-3 px-3">
+                                <span class="badge bg-warning-subtle text-warning-emphasis">Fasilitas</span>
+                                <span class="badge bg-success-subtle text-success rounded-pill"><i class="bi bi-check-circle"></i> Selesai ditangani</span>
+                            </div>
+                            <div class="card-body px-3">
+                                <small class="text-muted d-block mb-1">MASJID · TEMPAT WUDHU TIMUR</small>
+                                <h5 class="card-title fw-bold fs-6">Keran air tempat wudhu masjid timur bocor deras</h5>
+                                <p class="card-text text-secondary small">Keran air nomor 3 pada saf wudhu bagian timur patah dratnya sehingga air mengalir terus dan membasahi pelataran masjid.</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between align-items-center pb-3 px-3">
+                                <small class="text-muted">REP-1045 • 5 jam lalu</small>
+                                <small class="fw-bold">Elang Budi</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Report Item 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border rounded-3 shadow-sm report-card overflow-hidden">
+                            <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center pt-3 px-3">
+                                <span class="badge bg-info-subtle text-info-emphasis">Fasilitas</span>
+                                <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill"><i class="bi bi-clock"></i> Dalam penanganan</span>
+                            </div>
+                            <div class="card-body px-3">
+                                <small class="text-muted d-block mb-1">LAB KOMPUTER · GEDUNG B</small>
+                                <h5 class="card-title fw-bold fs-6">AC lab komputer gedung B meneteskan air ke meja</h5>
+                                <p class="card-text text-secondary small">Unit AC indoor sebelah utara bocor air pembuangan dan menetes tepat di atas meja praktik santri.</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between align-items-center pb-3 px-3">
+                                <small class="text-muted">REP-1041 • 1 hari lalu</small>
+                                <small class="fw-bold">Nafiel Wandani</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a class="btn btn-outline-secondary rounded-pill px-4" href="reports.html">Jelajahi arsip semua laporan</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-5 bg-light" id="faq">
+            <div class="container my-4">
+                <div class="row gy-4">
+                    <div class="col-lg-5">
+                        <span class="text-primary fw-semibold d-block mb-1">Bantuan & informasi</span>
+                        <h2 class="fw-bold mb-3">Masih punya <em class="text-primary font-style-normal">pertanyaan?</em></h2>
+                        <p class="text-muted">Temukan jawaban singkat seputar pengoperasian platform dan penanganan sarana sekolah.</p>
+                        <a class="text-decoration-none fw-semibold" href="dashboard.html#new-report">Butuh bantuan langsung? <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="accordion accordion-flush rounded-3 overflow-hidden border shadow-sm" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        01. Apa fungsi utama dari platform IDN E-Report?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-secondary small">
+                                        IDN E-Report adalah sistem informasi pengaduan resmi SMK IDN Boarding School untuk memfasilitasi santri dan pengajar dalam melaporkan kerusakan sarana belajar, fasilitas asrama, kendala laboratorium, serta aspirasi umum.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        02. Bagaimana alur dan tata cara membuat laporan baru?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-secondary small">
+                                        Pilih kategori laporan, tuliskan lokasi dan detail kendala, lampirkan foto bila ada, lalu kirim. Tim terkait akan memperbarui status laporan sampai selesai.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        03. Fasilitas apa saja yang dapat dilaporkan?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-secondary small">
+                                        Semua fasilitas pembelajaran dan lingkungan sekolah dapat dilaporkan, termasuk ruang kelas, laboratorium, internet, asrama, sarana ibadah, dan area umum.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                        04. Berapa lama standar waktu penyelesaian laporan?
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-secondary small">
+                                        Target respon awal adalah kurang dari 24 jam. Durasi penyelesaian menyesuaikan tingkat urgensi dan kebutuhan perbaikan di lapangan.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4 border-top">
+        <div class="container">
+            <div class="row gy-4 mb-4">
+                <div class="col-lg-5">
+                    <a class="navbar-brand d-flex align-items-center gap-2 mb-3" href="index.html">
+                        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+                        <span class="d-flex flex-column leading-tight">
+                            <strong class="lh-1 fs-5 text-white">IDN E-Report</strong>
+                            <small class="text-white-50 fs-7">SMK IDN 2026</small>
+                        </span>
+                    </a>
+                    <p class="text-white-50 small pe-lg-4">Portal pengaduan fasilitas dan akademik resmi SMK IDN Boarding School. Mewujudkan lingkungan belajar yang nyaman, modern, dan tanggap sarana.</p>
+                    <div class="d-flex gap-3 small text-white-50">
+                        <span><i class="bi bi-circle-fill text-success fs-8 me-1"></i> Sistem aktif</span>
+                        <span>© 2026 IDN E-Report</span>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h6 class="fw-bold mb-3">Navigasi</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="#home" class="text-white-50 text-decoration-none">Beranda</a></li>
+                        <li><a href="#about" class="text-white-50 text-decoration-none">Tentang kami</a></li>
+                        <li><a href="#services" class="text-white-50 text-decoration-none">Layanan</a></li>
+                        <li><a href="reports.html" class="text-white-50 text-decoration-none">Semua laporan</a></li>
+                        <li><a href="#faq" class="text-white-50 text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <h6 class="fw-bold mb-3">Kontak & Helpdesk</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small text-white-50">
+                        <li><i class="bi bi-envelope me-2"></i><a href="mailto:reportidn@gmail.com" class="text-white-50 text-decoration-none">reportidn@gmail.com</a></li>
+                        <li><i class="bi bi-whatsapp me-2"></i><a href="https://wa.me/6282125748970" class="text-white-50 text-decoration-none">+62 821-2574-8970</a></li>
+                        <li><i class="bi bi-geo-alt me-2"></i>Jl. Raya Dayeuh, Desa Sukanegara, Jonggol, Bogor, Jawa Barat 16830.</li>
                     </ul>
                 </div>
             </div>
+            
+            <div class="border-top border-secondary pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center small text-white-50 gap-2">
+                <span>© Dikelola & diterbitkan oleh Zabran Assyafiq Menggunakan Bootstrap Dan JS.</span>
+                <span>SMK IDN Boarding School Jonggol</span>
+            </div>
+        </div>
+    </footer>
 
-        </main>
-    </div>
-
-    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 5.3 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
