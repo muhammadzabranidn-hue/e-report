@@ -20,7 +20,7 @@ IDN E-Report is a web development project focused on creating a structured digit
 
 - HTML5
 - CSS3
-- JavaScript
+- Vanilla JavaScript
 - Bootstrap
 
 ## 📂 Project Structure
