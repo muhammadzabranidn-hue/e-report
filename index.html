@@ -10,74 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
-<style>
-    :root {
-    --bs-font-sans-serif: 'Plus Jakarta Sans', sans-serif;
-    --bs-primary: #2f63e8;
-    --bs-primary-rgb: 47, 99, 232;
-}
-
-body {
-    font-family: var(--bs-font-sans-serif);
-    background-color: #f8fafc;
-    color: #334155;
-}
-
-/* Brand Styling */
-.brand-mark {
-    display: inline-flex;
-    gap: 3px;
-    align-items: center;
-}
-.brand-mark span {
-    width: 4px;
-    height: 18px;
-    background-color: var(--bs-primary);
-    border-radius: 2px;
-}
-.brand-mark span:nth-child(2) { height: 24px; opacity: 0.7; }
-.brand-mark span:nth-child(3) { height: 14px; opacity: 0.4; }
-
-/* Hero & Cards */
-.hero-section {
-    padding: 5rem 0 4rem;
-    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-}
-.dashboard-preview {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 1.25rem;
-    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.01);
-}
-
-/* Service & Report Cards */
-.service-card, .report-card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.service-card:hover, .report-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 20px -5px rgba(0,0,0,0.08);
-}
-
-/* Status Badges */
-.badge-status {
-    font-size: 0.75rem;
-    padding: 0.35em 0.75em;
-    border-radius: 50rem;
-}
-
-/* FAQ Accordion Styling */
-.accordion-button:not(.collapsed) {
-    background-color: rgba(47, 99, 232, 0.08);
-    color: var(--bs-primary);
-}
-.accordion-button:focus {
-    box-shadow: none;
-    border-color: rgba(47, 99, 232, 0.25);
-}
-</style>
 <body class="landing-page">
 
     <!-- Header Navigation -->
@@ -103,7 +37,7 @@ body {
                     <li class="nav-item"><a class="nav-link" href="#recent">Laporan Terbaru</a></li>
                     <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
                     <li class="nav-item ms-lg-2">
-                        <a class="btn btn-primary rounded-pill px-4" href="dashboard.html">Ke Dashboard <i class="bi bi-arrow-up-right ms-1"></i></a>
+                        <a class="btn btn-primary rounded-pill px-4" href="pages/DashboardScreen/dashboard.html">Ke Dashboard <i class="bi bi-arrow-up-right ms-1"></i></a>
                     </li>
                 </ul>
             </div>
@@ -126,7 +60,7 @@ body {
                         <p class="lead text-secondary mb-4">Platform resmi santri untuk melaporkan kendala fasilitas, akademik, dan asrama secara transparan, cepat, dan terpercaya.</p>
                         
                         <div class="d-flex flex-wrap gap-3 mb-5">
-                            <a class="btn btn-primary btn-lg rounded-pill px-4" href="dashboard.html#new-report">Laporkan Masalah <i class="bi bi-arrow-up-right ms-1"></i></a>
+                            <a class="btn btn-primary btn-lg rounded-pill px-4" href="pages/DashboardScreen/dashboard.html#new-report">Laporkan Masalah <i class="bi bi-arrow-up-right ms-1"></i></a>
                             <a class="btn btn-outline-secondary btn-lg rounded-pill px-4" href="#about">Pelajari Alurnya <i class="bi bi-arrow-down ms-1"></i></a>
                         </div>
 
@@ -299,7 +233,7 @@ body {
                             </div>
                             <h4 class="fw-bold">Pengaduan fasilitas</h4>
                             <p class="text-muted small">Laporkan kerusakan ruang kelas, lab, jaringan internet, asrama, hingga sarana ibadah.</p>
-                            <a class="mt-auto text-decoration-none fw-semibold small" href="reports.html?category=fasilitas">Lihat laporan fasilitas <i class="bi bi-arrow-up-right"></i></a>
+                            <a class="mt-auto text-decoration-none fw-semibold small" href="pages/ReportsScreen/reports.html?category=fasilitas">Lihat laporan fasilitas <i class="bi bi-arrow-up-right"></i></a>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -310,7 +244,7 @@ body {
                             </div>
                             <h4 class="fw-bold">Pengaduan akademik</h4>
                             <p class="text-muted small">Sampaikan kendala perangkat pembelajaran, modul, jadwal, atau koneksi untuk praktik.</p>
-                            <a class="mt-auto text-decoration-none fw-semibold small" href="reports.html?category=akademik">Lihat laporan akademik <i class="bi bi-arrow-up-right"></i></a>
+                            <a class="mt-auto text-decoration-none fw-semibold small" href="pages/ReportsScreen/reports.html?category=akademik">Lihat laporan akademik <i class="bi bi-arrow-up-right"></i></a>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -321,7 +255,7 @@ body {
                             </div>
                             <h4 class="fw-bold">Aspirasi & privasi</h4>
                             <p class="text-muted small">Berikan masukan dan kritik konstruktif dengan perlindungan data pelapor yang terjaga.</p>
-                            <a class="mt-auto text-decoration-none fw-semibold small text-success" href="reports.html?category=aspirasi">Panduan privasi <i class="bi bi-arrow-up-right"></i></a>
+                            <a class="mt-auto text-decoration-none fw-semibold small text-success" href="pages/ReportsScreen/reports.html?category=aspirasi">Panduan privasi <i class="bi bi-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -334,7 +268,7 @@ body {
                             <p class="mb-0 small opacity-75">Ikuti alur 4 langkah mudah dan sertakan foto bukti agar laporanmu segera diproses.</p>
                         </div>
                     </div>
-                    <a class="btn btn-light rounded-pill px-4 text-nowrap" href="dashboard.html#new-report">Mulai buat laporan <i class="bi bi-arrow-up-right ms-1"></i></a>
+                    <a class="btn btn-light rounded-pill px-4 text-nowrap" href="pages/DashboardScreen/dashboard.html#new-report">Mulai buat laporan <i class="bi bi-arrow-up-right ms-1"></i></a>
                 </div>
             </div>
         </section>
@@ -347,7 +281,7 @@ body {
                         <span class="text-primary fw-semibold d-block mb-1">Pembaruan terkini</span>
                         <h2 class="fw-bold mb-0">Laporan <em class="text-primary font-style-normal">terbaru.</em></h2>
                     </div>
-                    <a class="text-decoration-none fw-semibold" href="reports.html">Semua laporan <i class="bi bi-arrow-up-right"></i></a>
+                    <a class="text-decoration-none fw-semibold" href="pages/ReportsScreen/reports.html">Semua laporan <i class="bi bi-arrow-up-right"></i></a>
                 </div>
 
                 <div class="row g-4 mb-4">
@@ -410,7 +344,7 @@ body {
                 </div>
 
                 <div class="text-center">
-                    <a class="btn btn-outline-secondary rounded-pill px-4" href="reports.html">Jelajahi arsip semua laporan</a>
+                    <a class="btn btn-outline-secondary rounded-pill px-4" href="pages/ReportsScreen/reports.html">Jelajahi arsip semua laporan</a>
                 </div>
             </div>
         </section>
@@ -423,7 +357,7 @@ body {
                         <span class="text-primary fw-semibold d-block mb-1">Bantuan & informasi</span>
                         <h2 class="fw-bold mb-3">Masih punya <em class="text-primary font-style-normal">pertanyaan?</em></h2>
                         <p class="text-muted">Temukan jawaban singkat seputar pengoperasian platform dan penanganan sarana sekolah.</p>
-                        <a class="text-decoration-none fw-semibold" href="dashboard.html#new-report">Butuh bantuan langsung? <i class="bi bi-arrow-up-right"></i></a>
+                        <a class="text-decoration-none fw-semibold" href="pages/DashboardScreen/dashboard.html#new-report">Butuh bantuan langsung? <i class="bi bi-arrow-up-right"></i></a>
                     </div>
                     <div class="col-lg-7">
                         <div class="accordion accordion-flush rounded-3 overflow-hidden border shadow-sm" id="faqAccordion">
@@ -506,7 +440,7 @@ body {
                         <li><a href="#home" class="text-white-50 text-decoration-none">Beranda</a></li>
                         <li><a href="#about" class="text-white-50 text-decoration-none">Tentang kami</a></li>
                         <li><a href="#services" class="text-white-50 text-decoration-none">Layanan</a></li>
-                        <li><a href="reports.html" class="text-white-50 text-decoration-none">Semua laporan</a></li>
+                        <li><a href="pages/ReportsScreen/reports.html" class="text-white-50 text-decoration-none">Semua laporan</a></li>
                         <li><a href="#faq" class="text-white-50 text-decoration-none">FAQ</a></li>
                     </ul>
                 </div>
@@ -529,6 +463,6 @@ body {
 
     <!-- Bootstrap 5.3 JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="app.js"></script>
+        <script src="js/app.js"></script>
 </body>
 </html>
