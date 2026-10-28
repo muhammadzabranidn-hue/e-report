@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Laporan | IDN E-Report</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3 CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        :root {
+            --bs-font-sans-serif: 'Plus Jakarta Sans', sans-serif;
+            --bs-primary: #2f63e8;
+            --bs-primary-rgb: 47, 99, 232;
+        }
+
+        body {
+            font-family: var(--bs-font-sans-serif);
+            background-color: #f8fafc;
+            color: #334155;
+        }
+
+        /* Topbar & Navbar */
+        .app-topbar {
+            height: 64px;
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* Brand Styling */
+        .brand-mark {
+            display: inline-flex;
+            gap: 3px;
+            align-items: center;
+        }
+        .brand-mark span {
+            width: 4px;
+            height: 16px;
+            background-color: var(--bs-primary);
+            border-radius: 2px;
+        }
+        .brand-mark span:nth-child(2) { height: 20px; opacity: 0.7; }
+        .brand-mark span:nth-child(3) { height: 12px; opacity: 0.4; }
+
+        /* Layout Sidebar */
+        .sidebar {
+            width: 260px;
+            min-height: calc(100vh - 64px);
+            background: #ffffff;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .sidebar .nav-link {
+            color: #64748b;
+            font-weight: 500;
+            border-radius: 0.5rem;
+            padding: 0.625rem 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar .nav-link:hover {
+            color: var(--bs-primary);
+            background-color: #f1f5f9;
+        }
+
+        .sidebar .nav-link.active {
+            color: var(--bs-primary);
+            background-color: rgba(47, 99, 232, 0.08);
+            font-weight: 600;
+        }
+
+        /* Content Area */
+        .content-area {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        /* Report Cards */
+        .report-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            background: #ffffff;
+        }
+        .report-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08) !important;
+        }
+
+        .avatar-circle {
+            width: 38px;
+            height: 38px;
+            background-color: var(--bs-primary);
+            color: white;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body class="app-body">
+
+    <!-- Topbar -->
+    <header class="app-topbar sticky-top d-flex align-items-center justify-content-between px-3 px-md-4">
+        <div class="d-flex align-items-center gap-3">
+            <a class="text-decoration-none d-flex align-items-center gap-2" href="index.html">
+                <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="d-flex flex-column leading-tight">
+                    <strong class="lh-1 fs-6 text-dark">IDN E-Report</strong>
+                    <small class="text-muted fs-8">SMK IDN 2026</small>
+                </span>
+            </a>
+            <span class="text-muted d-none d-sm-inline">/</span>
+            <span class="text-secondary fw-semibold small d-none d-sm-inline">Data laporan</span>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+            <div class="text-end d-none d-sm-block">
+                <strong class="d-block fs-7 lh-1 text-dark">Admin Sarpras</strong>
+                <small class="text-muted fs-8">Pengelola Sistem</small>
+            </div>
+            <span class="avatar-circle">AS</span>
+        </div>
+    </header>
+
+    <div class="d-flex">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar d-none d-lg-flex flex-column p-3">
+            <p class="text-uppercase text-muted fw-bold fs-8 mb-2 px-2">Workspace</p>
+            <nav class="nav flex-column gap-1" aria-label="Menu dashboard">
+                <a class="nav-link" href="dashboard.html">
+                    <i class="bi bi-grid-1x2 fs-5"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a class="nav-link active" href="reports.html">
+                    <i class="bi bi-file-earmark-text fs-5"></i>
+                    <span>Data laporan</span>
+                </a>
+                <a class="nav-link" href="statistic.html">
+                    <i class="bi bi-pie-chart fs-5"></i>
+                    <span>Statistik</span>
+                </a>
+                <a class="nav-link" href="settings.html">
+                    <i class="bi bi-gear fs-5"></i>
+                    <span>Pengaturan</span>
+                </a>
+            </nav>
+
+            <hr class="my-3 text-muted">
+
+            <a class="nav-link text-secondary mt-auto" href="index.html">
+                <i class="bi bi-arrow-left"></i>
+                <span>Kembali ke landing page</span>
+            </a>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content-area">
+            <!-- Mobile Offcanvas Sidebar Toggle -->
+            <div class="d-lg-none mb-3">
+                <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+                    <i class="bi bi-list me-1"></i> Menu Sidebar
+                </button>
+            </div>
+
+            <!-- Header Section & Filter -->
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+                <div>
+                    <h1 class="h3 fw-bold text-dark mb-1">Arsip semua laporan</h1>
+                    <p class="text-secondary small mb-0">Telusuri laporan fasilitas, akademik, dan aspirasi yang tercatat di sistem.</p>
+                </div>
+                <div class="archive-filter" style="min-width: 200px;">
+                    <label for="report-filter" class="visually-hidden">Filter kategori</label>
+                    <select id="report-filter" class="form-select form-select-sm border-secondary-subtle" data-report-filter>
+                        <option value="semua">Semua kategori</option>
+                        <option value="fasilitas">Fasilitas</option>
+                        <option value="akademik">Akademik</option>
+                        <option value="aspirasi">Aspirasi</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Grid Cards Laporan -->
+            <div class="row g-4 archive-grid">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-xl-4 report-card-item" data-report-category="fasilitas">
+                    <a href="single-report.html?id=REP-1048" class="text-decoration-none text-dark">
+                        <div class="card h-100 border rounded-3 shadow-sm report-card">
+                            <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center pt-3 px-3">
+                                <span class="badge bg-primary-subtle text-primary">Fasilitas</span>
+                                <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill"><i class="bi bi-clock"></i> Dalam penanganan</span>
+                            </div>
+                            <div class="card-body px-3">
+                                <small class="text-muted d-block mb-1"><i class="bi bi-geo-alt me-1"></i>RUANG KELAS · X RPL C</small>
+                                <h5 class="card-title fw-bold fs-6 text-truncate">Proyektor & kabel VGA ruang X RPL C tidak menyala</h5>
+                                <p class="card-text text-secondary small text-line-clamp-2">Proyektor gantung ruang kelas teori mati mendadak saat sesi coding dan membutuhkan pengecekan adaptor daya.</p>
+                                <div class="d-flex justify-content-between align-items-center text-muted fs-8 mt-3">
+                                    <span>REP-1048</span>
+                                    <span>2 jam yang lalu</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-light border-top-0 d-flex justify-content-between align-items-center py-2 px-3">
+                                <span class="small text-muted">Pelapor: <strong class="text-dark">Baraa Abyan</strong></span>
+                                <span class="small fw-semibold text-primary">Detail <i class="bi bi-arrow-up-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6 col-xl-4 report-card-item" data-report-category="fasilitas">
+                    <a href="single-report.html?id=REP-1045" class="text-decoration-none text-dark">
+                        <div class="card h-100 border rounded-3 shadow-sm report-card">
+                            <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center pt-3 px-3">
+                                <span class="badge bg-warning-subtle text-warning-emphasis">Fasilitas</span>
+                                <span class="badge bg-success-subtle text-success rounded-pill"><i class="bi bi-check-circle"></i> Selesai ditangani</span>
+                            </div>
+                            <div class="card-body px-3">
+                                <small class="text-muted d-block mb-1"><i class="bi bi-geo-alt me-1"></i>MASJID · TEMPAT WUDHU TIMUR</small>
+                                <h5 class="card-title fw-bold fs-6 text-truncate">Keran air tempat wudhu masjid timur bocor deras</h5>
+                                <p class="card-text text-secondary small">Keran air nomor 3 patah dratnya sehingga air mengalir terus dan membasahi area pelataran masjid.</p>
+                                <div class="d-flex justify-content-between align-items-center text-muted fs-8 mt-3">
+                                    <span>REP-1045</span>
+                                    <span>5 jam yang lalu</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-light border-top-0 d-flex justify-content-between align-items-center py-2 px-3">
+                                <span class="small text-muted">Pelapor: <strong class="text-dark">Baraa Abyan</strong></span>
+                                <span class="small fw-semibold text-primary">Detail <i class="bi bi-arrow-up-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-6 col-xl-4 report-card-item" data-report-category="fasilitas">
+                    <a href="single-report.html?id=REP-1041" class="text-decoration-none text-dark">
+                        <div class="card h-100 border rounded-3 shadow-sm report-card">
+                            <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center pt-3 px-3">
+                                <span class="badge bg-purple-subtle text-purple" style="background-color: #f3e8ff; color: #7e22ce;">Fasilitas</span>
+                                <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill"><i class="bi bi-clock"></i> Dalam penanganan</span>
+                            </div>
+                            <div class="card-body px-3">
+                                <small class="text-muted d-block mb-1"><i class="bi bi-geo-alt me-1"></i>LAB KOMPUTER · GEDUNG B</small>
+                                <h5 class="card-title fw-bold fs-6 text-truncate">AC lab komputer gedung B meneteskan air ke meja</h5>
+                                <p class="card-text text-secondary small">Unit AC indoor sebelah utara bocor air pembuangan dan menetes tepat di atas meja praktik santri.</p>
+                                <div class="d-flex justify-content-between align-items-center text-muted fs-8 mt-3">
+                                    <span>REP-1041</span>
+                                    <span>1 hari yang lalu</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-light border-top-0 d-flex justify-content-between align-items-center py-2 px-3">
+                                <span class="small text-muted">Pelapor: <strong class="text-dark">Baraa Abyan</strong></span>
+                                <span class="small fw-semibold text-primary">Detail <i class="bi bi-arrow-up-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-6 col-xl-4 report-card-item" data-report-category="akademik">
+                    <a href="single-report.html?id=REP-1036" class="text-decoration-none text-dark">
+                        <div class="card h-100 border rounded-3 shadow-sm report-card">
+                            <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center pt-3 px-3">
+                                <span class="badge bg-info-subtle text-info-emphasis">Akademik</span>
+                                <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill"><i class="bi bi-clock"></i> Dalam penanganan</span>
+                            </div>
+                            <div class="card-body px-3">
+                                <small class="text-muted d-block mb-1"><i class="bi bi-geo-alt me-1"></i>LAB KOMPUTER · GEDUNG A</small>
+                                <h5 class="card-title fw-bold fs-6 text-truncate">Koneksi internet lab melambat saat praktik</h5>
+                                <p class="card-text text-secondary small">Koneksi server praktik RPL sering terputus ketika seluruh komputer digunakan bersamaan di sesi siang.</p>
+                                <div class="d-flex justify-content-between align-items-center text-muted fs-8 mt-3">
+                                    <span>REP-1036</span>
+                                    <span>2 hari yang lalu</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-light border-top-0 d-flex justify-content-between align-items-center py-2 px-3">
+                                <span class="small text-muted">Pelapor: <strong class="text-dark">Rafa Alfarizi</strong></span>
+                                <span class="small fw-semibold text-primary">Detail <i class="bi bi-arrow-up-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-md-6 col-xl-4 report-card-item" data-report-category="aspirasi">
+                    <a href="single-report.html?id=REP-1031" class="text-decoration-none text-dark">
+                        <div class="card h-100 border rounded-3 shadow-sm report-card">
+                            <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center pt-3 px-3">
+                                <span class="badge bg-success-subtle text-success">Aspirasi</span>
+                                <span class="badge bg-success-subtle text-success rounded-pill"><i class="bi bi-check-circle"></i> Diterima</span>
+                            </div>
+                            <div class="card-body px-3">
+                                <small class="text-muted d-block mb-1"><i class="bi bi-geo-alt me-1"></i>LINGKUNGAN SEKOLAH</small>
+                                <h5 class="card-title fw-bold fs-6 text-truncate">Usulan penambahan papan informasi kegiatan</h5>
+                                <p class="card-text text-secondary small">Usulan agar informasi kegiatan santri dan jadwal penting tersedia di area yang mudah dilihat semua siswa.</p>
+                                <div class="d-flex justify-content-between align-items-center text-muted fs-8 mt-3">
+                                    <span>REP-1031</span>
+                                    <span>3 hari yang lalu</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-light border-top-0 d-flex justify-content-between align-items-center py-2 px-3">
+                                <span class="small text-muted">Pelapor: <strong class="text-dark">Fauzan</strong></span>
+                                <span class="small fw-semibold text-primary">Detail <i class="bi bi-arrow-up-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-md-6 col-xl-4 report-card-item" data-report-category="fasilitas">
+                    <a href="single-report.html?id=REP-1027" class="text-decoration-none text-dark">
+                        <div class="card h-100 border rounded-3 shadow-sm report-card">
+                            <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center pt-3 px-3">
+                                <span class="badge bg-warning-subtle text-warning-emphasis">Fasilitas</span>
+                                <span class="badge bg-success-subtle text-success rounded-pill"><i class="bi bi-check-circle"></i> Selesai ditangani</span>
+                            </div>
+                            <div class="card-body px-3">
+                                <small class="text-muted d-block mb-1"><i class="bi bi-geo-alt me-1"></i>ASRAMA · BLOK C</small>
+                                <h5 class="card-title fw-bold fs-6 text-truncate">Lampu koridor asrama Blok C padam</h5>
+                                <p class="card-text text-secondary small">Dua lampu pada koridor lantai dua padam dan membuat akses menuju kamar kurang terang setelah maghrib.</p>
+                                <div class="d-flex justify-content-between align-items-center text-muted fs-8 mt-3">
+                                    <span>REP-1027</span>
+                                    <span>4 hari yang lalu</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-light border-top-0 d-flex justify-content-between align-items-center py-2 px-3">
+                                <span class="small text-muted">Pelapor: <strong class="text-dark">Rizky</strong></span>
+                                <span class="small fw-semibold text-primary">Detail <i class="bi bi-arrow-up-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Empty State Message -->
+            <p class="text-center text-muted py-5" data-filter-empty hidden>Belum ada laporan pada kategori ini.</p>
+        </main>
+    </div>
+
+    <!-- Mobile Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold">Menu Navigation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-3">
+            <nav class="nav flex-column gap-1">
+                <a class="nav-link text-secondary" href="dashboard.html"><i class="bi bi-grid-1x2 me-2"></i> Dashboard</a>
+                <a class="nav-link text-primary fw-bold" href="reports.html"><i class="bi bi-file-earmark-text me-2"></i> Data laporan</a>
+                <a class="nav-link text-secondary" href="statistic.html"><i class="bi bi-pie-chart me-2"></i> Statistik</a>
+                <a class="nav-link text-secondary" href="settings.html"><i class="bi bi-gear me-2"></i> Pengaturan</a>
+            </nav>
+            <hr>
+            <a class="nav-link text-secondary" href="index.html"><i class="bi bi-arrow-left me-2"></i> Kembali ke landing page</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
