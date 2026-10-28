@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistik | IDN E-Report</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3 CSS & Icons -->
+    <link href="../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="statistic.css">
+</head>
+<body class="app-body">
+
+    <!-- Topbar -->
+    <header class="app-topbar sticky-top d-flex align-items-center justify-content-between px-3 px-md-4">
+        <div class="d-flex align-items-center gap-3">
+            <a class="text-decoration-none d-flex align-items-center gap-2" href="../../index.html">
+                <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="d-flex flex-column leading-tight">
+                    <strong class="lh-1 fs-6 text-dark">IDN E-Report</strong>
+                    <small class="text-muted fs-8">SMK IDN 2026</small>
+                </span>
+            </a>
+            <span class="text-muted d-none d-sm-inline">/</span>
+            <span class="text-secondary fw-semibold small d-none d-sm-inline">Statistik</span>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+            <div class="text-end d-none d-sm-block">
+                <strong class="d-block fs-7 lh-1 text-dark">Admin Sarpras</strong>
+                <small class="text-muted fs-8">Pengelola Sistem</small>
+            </div>
+            <span class="avatar-circle">AS</span>
+        </div>
+    </header>
+
+    <div class="d-flex">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar d-none d-lg-flex flex-column p-3">
+            <p class="text-uppercase text-muted fw-bold fs-8 mb-2 px-2">Workspace</p>
+            <nav class="nav flex-column gap-1" aria-label="Menu dashboard">
+                <a class="nav-link" href="../DashboardScreen/dashboard.html">
+                    <i class="bi bi-grid-1x2 fs-5"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a class="nav-link" href="../ReportsScreen/reports.html">
+                    <i class="bi bi-file-earmark-text fs-5"></i>
+                    <span>Data laporan</span>
+                </a>
+                <a class="nav-link active" href="../StatisticScreen/statistic.html">
+                    <i class="bi bi-pie-chart fs-5"></i>
+                    <span>Statistik</span>
+                </a>
+                <a class="nav-link" href="../SettingsScreen/settings.html">
+                    <i class="bi bi-gear fs-5"></i>
+                    <span>Pengaturan</span>
+                </a>
+            </nav>
+
+            <hr class="my-3 text-muted">
+
+            <a class="nav-link text-secondary mt-auto" href="../../index.html">
+                <i class="bi bi-arrow-left"></i>
+                <span>Kembali ke landing page</span>
+            </a>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content-area">
+            <!-- Mobile Offcanvas Sidebar Toggle -->
+            <div class="d-lg-none mb-3">
+                <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+                    <i class="bi bi-list me-1"></i> Menu Sidebar
+                </button>
+            </div>
+
+            <!-- Page Title -->
+            <div class="mb-4">
+                <h1 class="h3 fw-bold text-dark mb-1">Statistik Data Laporan</h1>
+                <p class="text-secondary small mb-0">Analisis dan grafik rekapitulasi laporan santri secara berkala.</p>
+            </div>
+
+            <!-- Charts Row 1 -->
+            <div class="row g-4 mb-4">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-1">Statistik Laporan</h5>
+                            <p class="text-secondary small mb-4">Statistik Laporan Santri Setiap Bulan</p>
+                            <div style="position: relative; height: 300px; width: 100%;">
+                                <canvas id="santriChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-1">Status Laporan</h5>
+                            <p class="text-secondary small mb-4">Persentase Status Laporan Santri</p>
+                            <div style="position: relative; height: 300px; width: 100%; display: flex; justify-content: center; align-items: center;">
+                                <canvas id="statusChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tambahan Chart Baru (Bar Chart Kategori Laporan) -->
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-1">Kategori Laporan Terbanyak</h5>
+                            <p class="text-secondary small mb-4">Perbandingan jumlah laporan berdasarkan kategori fasilitas, akademik, dan aspirasi.</p>
+                            <div style="position: relative; height: 260px; width: 100%;">
+                                <canvas id="categoryBarChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Mobile Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold">Menu Navigation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-3">
+            <nav class="nav flex-column gap-1">
+                <a class="nav-link text-secondary" href="../DashboardScreen/dashboard.html"><i class="bi bi-grid-1x2 me-2"></i> Dashboard</a>
+                <a class="nav-link text-secondary" href="../ReportsScreen/reports.html"><i class="bi bi-file-earmark-text me-2"></i> Data laporan</a>
+                <a class="nav-link active text-primary fw-bold" href="../StatisticScreen/statistic.html"><i class="bi bi-pie-chart me-2"></i> Statistik</a>
+                <a class="nav-link text-secondary" href="../SettingsScreen/settings.html"><i class="bi bi-gear me-2"></i> Pengaturan</a>
+            </nav>
+            <hr>
+            <a class="nav-link text-secondary" href="../../index.html"><i class="bi bi-arrow-left me-2"></i> Kembali ke landing page</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3 & Chart.js JS Bundle -->
+    <script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Script Inisialisasi Grafik Chart.js -->
+    <script>
+        // 1. Grafik Garis Bulanan (santriChart)
+        const ctxSantri = document.getElementById('santriChart').getContext('2d');
+        new Chart(ctxSantri, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun'],
+                datasets: [{
+                    label: 'Jumlah Laporan',
+                    data: [12, 19, 15, 25, 22, 30],
+                    borderColor: '#2f63e8',
+                    backgroundColor: 'rgba(47, 99, 232, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // 2. Grafik Donat Status (statusChart)
+        const ctxStatus = document.getElementById('statusChart').getContext('2d');
+        new Chart(ctxStatus, {
+            type: 'doughnut',
+            data: {
+                labels: ['Diterima', 'Menunggu', 'Ditolak'],
+                datasets: [{
+                    data: [55, 20, 10],
+                    backgroundColor: ['#198754', '#ffc107', '#dc3545'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        // 3. Grafik Batang Tambahan (categoryBarChart)
+        const ctxCategory = document.getElementById('categoryBarChart').getContext('2d');
+        new Chart(ctxCategory, {
+            type: 'bar',
+            data: {
+                labels: ['Fasilitas Kelas', 'Asrama', 'Laboratorium', 'Masjid', 'Koneksi Internet'],
+                datasets: [{
+                    label: 'Total Kasus',
+                    data: [35, 20, 15, 10, 25],
+                    backgroundColor: '#2f63e8',
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
